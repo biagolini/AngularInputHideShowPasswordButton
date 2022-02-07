@@ -1,0 +1,28 @@
+<div class="login-container">
+  <form [formGroup]="loginForm">
+    <input
+      class="half-width"
+      formControlName="userName"
+      matInput
+      placeholder="Username"
+    />
+
+    <input
+      class="half-width"
+      formControlName="password"
+      matInput
+      placeholder="Password"
+      [type]="hidePassword ? 'text' : 'password'"
+    />
+
+    <button class="half-width" (click)="hidePassword = true">
+      Show password
+    </button>
+    <button class="half-width" (click)="hidePassword = false">
+      Hide password
+    </button>
+    <button class="half-width" (click)="hidePassword = !hidePassword">
+      Switch password visibility
+    </button>
+  </form>
+</div>
